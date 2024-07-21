@@ -19,21 +19,7 @@ def push(partition):
         if (i == 0 or partition[i-1] > partition[i]):
             partition[i] += 1
             return partition
-def recursive_gen(N):
-    if N == 1:
-        return [1]
-    prev = gen(N-1)
-    l = len(prev)
-    temp = True
-    while(True):
-        i = randInt(l)
-        if (i == l):
-            prev.append(1)
-            return prev
-        if (i == 0 or prev[i-1] > prev[i]):
-            prev[i] += 1
-            return prev
-        
+
 def gen(N):
     ans = []
     for i in range(N):
@@ -59,7 +45,7 @@ def draw(N):
 
 
 
-print(draw(5000000))
+print(draw(20000000))
 
 
                         
